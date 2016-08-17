@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_search"
+        android:title="검색"
+        android:icon="@drawable/sample_2"
+        android:orderInCategory="100" />
+    <item
+        android:id="@+id/menu_home"
+        android:title="홈"
+        android:icon="@drawable/sample_1"
+        android:orderInCategory="101" />
+    <item
+        android:id="@+id/menu_message"
+        android:title="메시지"
+        android:icon="@drawable/sample_3"
+        android:orderInCategory="102" />
+    <item
+        android:id="@+id/menu_travel"
+        android:title="여행"
+        android:icon="@drawable/sample_4"
+        android:orderInCategory="103" />
+
+    <item
+        android:id="@+id/menu_wishlist"
+        android:title="위시리스트"
+        android:icon="@drawable/sample_wishlist"
+        android:orderInCategory="104" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:title="프로필"
+        android:icon="@drawable/sample_5"
+        android:orderInCategory="105" />
+
+    <item
+        android:id="@+id/menu_hosting"
+        android:title="호스팅 하기"
+        android:icon="@drawable/sample_hosting"
+        android:orderInCategory="106" />
+
+    <item
+        android:id="@+id/menu_setting"
+        android:title="환경설정"
+        android:icon="@drawable/sample_setting"
+        android:orderInCategory="107" />
+
+    <item
+        android:id="@+id/menu_help"
+        android:title="도움말"
+        android:icon="@drawable/sample_help"
+        android:orderInCategory="108" />
+
+    <item
+        android:id="@+id/menu_invitate"
+        android:title="친구 초대하기"
+        android:icon="@drawable/sample_invitate"
+        android:orderInCategory="109" />
+
+    <item
+        android:id="@+id/menu_feedback"
+        android:title="피드백 남기기"
+        android:icon="@drawable/sample_feedback"
+        android:orderInCategory="110" />
+</menu>
