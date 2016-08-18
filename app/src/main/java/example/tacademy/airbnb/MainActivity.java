@@ -82,15 +82,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             }
             case R.id.menu_feedback: {
-                Spinner spinner = (Spinner) this.findViewById(R.id.spinner_feedback);
-                mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, (String[])getResources().getStringArray(R.array.spinner));
-                mAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                // sp.setOnItemSelectedListener(this);
+
+//                spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                    @Override
+//                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                        String items = spinner.getSelectedItem().toString();
+//                        Log.i("Selected item : ", items);
+//                    }
+//                });
+
                 LayoutInflater inflater = getLayoutInflater();
                 View dialoglayout = inflater.inflate(R.layout.dialog_feedback, null);
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-                //              final EditText explain = new EditText(this);
+                Spinner spinner = (Spinner)dialoglayout.findViewById(R.id.spinner_feedback);
+                mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, (String[]) getResources().getStringArray(R.array.spinner));
+                mAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
                 builder.setTitle("에어비앤비에 피드백 보내기");
                 builder.setMessage("에어비앤비 앱에 대한 피드백을 이메일로 보내주세요.");
                 builder.setPositiveButton("피드백 보내기", new DialogInterface.OnClickListener() {
@@ -110,8 +118,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 });
                 builder.setCancelable(false);
 
-                //               LinearLayout layout = new LinearLayout(getApplicationContext());
-                //             layout.addView(explain);
                 builder.setView(dialoglayout);
                 spinner.setAdapter(mAdapter);
                 dialog = builder.create();
