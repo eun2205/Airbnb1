@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -25,14 +26,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab_click);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab_click);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
         drawer = (DrawerLayout) findViewById(R.id.drawer);
@@ -76,20 +77,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             }
             case R.id.menu_help: {
+                startActivity(new Intent(MainActivity.this, HelpActivity.class));
                 break;
             }
             case R.id.menu_invitate: {
                 break;
             }
             case R.id.menu_feedback: {
-
-//                spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                    @Override
-//                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                        String items = spinner.getSelectedItem().toString();
-//                        Log.i("Selected item : ", items);
-//                    }
-//                });
 
                 LayoutInflater inflater = getLayoutInflater();
                 View dialoglayout = inflater.inflate(R.layout.dialog_feedback, null);

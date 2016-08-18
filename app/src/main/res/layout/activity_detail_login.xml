@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#4db6ac"
+    android:background="#00a699"
     tools:context="example.tacademy.airbnb.DetailLoginActivity">
 
     <TextView
@@ -37,8 +37,8 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="1dp"
-        android:layout_height="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/btn_back"
         android:background="@drawable/sample_back"
         android:layout_alignParentTop="true"
