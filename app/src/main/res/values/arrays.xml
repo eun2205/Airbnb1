@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner">
+        <item>Guidebooks</item>
+        <item>Neighborhoods</item>
+        <item>Search</item>
+        <item>Booking Flow</item>
+        <item>Hosting Tools</item>
+        <item>Review Flow</item>
+        <item>Messaging</item>
+        <item>Other</item>
+    </string-array>
+</resources>
