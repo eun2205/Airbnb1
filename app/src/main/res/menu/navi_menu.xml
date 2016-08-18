@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id = "@+id/navi_menu">
     <item
         android:id="@+id/menu_search"
         android:title="검색"
@@ -61,5 +62,13 @@
         android:id="@+id/menu_feedback"
         android:title="피드백 남기기"
         android:icon="@drawable/sample_feedback"
+        android:orderInCategory="110" />
+    </group>
+
+    <item
+        android:id="@+id/footer_spacer"
+        android:title=""
+        android:checkable="false"
+        android:enabled="false"
         android:orderInCategory="110" />
 </menu>
