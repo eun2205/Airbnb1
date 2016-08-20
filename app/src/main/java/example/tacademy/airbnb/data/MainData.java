@@ -9,7 +9,7 @@ public class MainData {
 
     private SearchImage searchImage;
 
-    private HostCommend hostCommend;
+   // private HostCommend hostCommend;
 
     private WeekCommend weekCommend;
 
@@ -20,6 +20,8 @@ public class MainData {
     private GuideData guideData;
 
     private HostCommend hostCommend2;
+
+    private LatelySearchData latelySearchData;
 
     public HostCommend getHostCommend2() {
         return hostCommend2;
@@ -53,9 +55,9 @@ public class MainData {
         this.airBnBCommend = airBnBCommend;
     }
 
-    public HostCommend getHostCommend() {
-        return hostCommend;
-    }
+ //   public HostCommend getHostCommend() {
+//        return hostCommend;
+//    }
 
     public WeekCommend getWeekCommend() {
         return weekCommend;
@@ -65,9 +67,9 @@ public class MainData {
         this.weekCommend = weekCommend;
     }
 
-    public void setHostCommend(HostCommend hostCommend) {
-        this.hostCommend = hostCommend;
-    }
+//    public void setHostCommend(HostCommend hostCommend) {
+//        this.hostCommend = hostCommend;
+//    }
 
     public String getUserName() {
         return userName;
@@ -83,5 +85,13 @@ public class MainData {
 
     public void setSearchImage(SearchImage searchImage) {
         this.searchImage = searchImage;
+    }
+
+    public LatelySearchData getLatelySearchData() {
+        return latelySearchData;
+    }
+
+    public void setLatelySearchData(LatelySearchData latelySearchData) {
+        this.latelySearchData = latelySearchData;
     }
 }

@@ -19,6 +19,7 @@ import example.tacademy.airbnb.data.AirBnBCommend;
 import example.tacademy.airbnb.data.GuideData;
 import example.tacademy.airbnb.data.HostCommend;
 import example.tacademy.airbnb.data.ImageData;
+import example.tacademy.airbnb.data.LatelySearchData;
 import example.tacademy.airbnb.data.MainData;
 import example.tacademy.airbnb.data.PopularData;
 import example.tacademy.airbnb.data.SearchImage;
@@ -112,6 +113,23 @@ public class MainFragment extends Fragment {
 
         mainData.setSearchImage(searchImage);
 
+        LatelySearchData latelySearchData = new LatelySearchData();
+
+        imageData = new ImageData();
+        imageData.setImageId(R.drawable.sample_seoul);
+        imageData.setImageName("서울");
+        latelySearchData.getImageDatas().add(imageData);
+        imageData = new ImageData();
+        imageData.setImageId(R.drawable.sample_dubro);
+        imageData.setImageName("파리");
+        latelySearchData.getImageDatas().add(imageData);
+        imageData = new ImageData();
+        imageData.setImageId(R.drawable.sample_dubro);
+        imageData.setImageName("두브로브니크");
+        latelySearchData.getImageDatas().add(imageData);
+
+        mainData.setLatelySearchData(latelySearchData);
+
 
         WeekCommend weekCommend = new WeekCommend();
 
@@ -196,7 +214,7 @@ public class MainFragment extends Fragment {
         HostCommend hostCommend = new HostCommend();
         hostCommend.setImage(ContextCompat.getDrawable(getContext(),R.drawable.sample_dubro));
         hostCommend.setRecomendText("여유 공간을 임대하여 수입을 올리세요.");
-        mainData.setHostCommend(hostCommend);
+        mainData.setHostCommend2(hostCommend);
 
         hostCommend = new HostCommend();
         hostCommend.setImage(ContextCompat.getDrawable(getContext(),R.drawable.sample_seoul));

@@ -24,7 +24,7 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     MainData mainData;
 
     private static final int VIEW_TYPE_CATEGORY_TITLE_SEARCH = 10;
-    private static final int VIEW_TYPE_CATEGORY_TITLE_HOSTCOMMEND = 11;
+    private static final int VIEW_TYPE_CATEGORY_TITLE_LATELY_SEARCH = 11;
     private static final int VIEW_TYPE_CATEGORY_TITLE_WEEKCOMMEND = 12;
     private static final int VIEW_TYPE_CATEGORY_TITLE_AIRBNBCOMMENT = 13;
     private static final int VIEW_TYPE_CATEGORY_TITLE_POPULAR = 14;
@@ -33,7 +33,7 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     private static final int VIEW_TYPE_MAIN_INFO = 0;
     private static final int VIEW_TYPE_SEARCH = 1;
-    private static final int VIEW_TYPE_HOSTCOMMEND = 2;
+    private static final int VIEW_TYPE_LATELY_SEARCH = 2;
     private static final int VIEW_TYPE_WEEKCOMMEND = 3;
     private static final int VIEW_TYPE_AIRBNBCOMMENT = 4;
     private static final int VIEW_TYPE_POPULAR = 5;
@@ -80,13 +80,13 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             position -= 1;
         }
 
-        if (mainData.getHostCommend() != null) {
+        if (mainData.getLatelySearchData() != null) {
             if (position == 0){
-                return VIEW_TYPE_CATEGORY_TITLE_HOSTCOMMEND;
+                return VIEW_TYPE_CATEGORY_TITLE_LATELY_SEARCH;
             }
             position--;
             if (position == 0) {
-                return VIEW_TYPE_HOSTCOMMEND;
+                return VIEW_TYPE_LATELY_SEARCH;
             }
             position -= 1;
         }
@@ -170,14 +170,14 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 CategoryViewHolder holder = new CategoryViewHolder(view);
                 return holder;
             }
-            case VIEW_TYPE_CATEGORY_TITLE_HOSTCOMMEND : {
+            case VIEW_TYPE_CATEGORY_TITLE_LATELY_SEARCH: {
                 View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_category, parent, false);
                 CategoryViewHolder holder = new CategoryViewHolder(view);
                 return holder;
             }
-            case VIEW_TYPE_HOSTCOMMEND : {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_host_commend, parent, false);
-                HostRecommendViewHolder holder = new HostRecommendViewHolder(view);
+            case VIEW_TYPE_LATELY_SEARCH : {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_slider_item, parent, false);
+               ImageSliderViewHolder holder = new ImageSliderViewHolder(view, context);
                 return holder;
             }
             case VIEW_TYPE_WEEKCOMMEND : {
@@ -260,16 +260,16 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             }
             position -= 1;
         }
-        if (mainData.getHostCommend() != null) {
+        if (mainData.getLatelySearchData() != null) {
             if (position == 0){
                 CategoryViewHolder cvh = (CategoryViewHolder)holder;
-                cvh.setCategory("호스트가 되세요");
+                cvh.setCategory("최근 검색");
                 return;
             }
             position--;
             if (position == 0) {
-                HostRecommendViewHolder hrvh = (HostRecommendViewHolder)holder;
-                hrvh.setHostCommend(mainData.getHostCommend());
+                ImageSliderViewHolder lvh = (ImageSliderViewHolder) holder;
+                lvh.setImageData(mainData.getLatelySearchData());
                 return ;
             }
             position -= 1;
@@ -330,7 +330,7 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             }
             position -= 1;
         }
-        if (mainData.getHostCommend() != null) {
+        if (mainData.getHostCommend2() != null) {
             if (position == 0){
                 CategoryViewHolder cvh = (CategoryViewHolder)holder;
                 cvh.setCategory("친구 초대하기");
@@ -357,7 +357,7 @@ public class MainListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         if(mainData.getSearchImage() != null) {
             count += 2;
         }
-        if(mainData.getHostCommend() != null) {
+        if(mainData.getLatelySearchData() != null) {
             count += 2;
         }
         if(mainData.getWeekCommend() != null) {
