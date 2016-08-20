@@ -99,16 +99,16 @@ public class MainFragment extends Fragment {
         SearchImage searchImage = new SearchImage();
 
         ImageData imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_seoul);
-        imageData.setImageName("서울");
+        imageData.setImageId(R.drawable.sample_bangkok);
+        imageData.setImageName("방콕");
         searchImage.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_paris);
-        imageData.setImageName("파리");
+        imageData.setImageId(R.drawable.sample_zadar);
+        imageData.setImageName("자다르");
         searchImage.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_dubro);
-        imageData.setImageName("두브로브니크");
+        imageData.setImageId(R.drawable.sample_milano);
+        imageData.setImageName("밀라노");
         searchImage.getImageDatas().add(imageData);
 
         mainData.setSearchImage(searchImage);
@@ -116,16 +116,16 @@ public class MainFragment extends Fragment {
         LatelySearchData latelySearchData = new LatelySearchData();
 
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_seoul);
-        imageData.setImageName("서울");
+        imageData.setImageId(R.drawable.sample_home);
+     //  imageData.setImageName("서울");
         latelySearchData.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_dubro);
-        imageData.setImageName("파리");
+        imageData.setImageId(R.drawable.sample_home2);
+     //   imageData.setImageName("파리");
         latelySearchData.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_dubro);
-        imageData.setImageName("두브로브니크");
+        imageData.setImageId(R.drawable.sample_home3);
+     //   imageData.setImageName("두브로브니크");
         latelySearchData.getImageDatas().add(imageData);
 
         mainData.setLatelySearchData(latelySearchData);
@@ -134,6 +134,10 @@ public class MainFragment extends Fragment {
         WeekCommend weekCommend = new WeekCommend();
 
         imageData = new ImageData();
+        imageData.setImageId(R.drawable.sample_paris);
+        imageData.setImageName("파리");
+        weekCommend.getImageDatas().add(imageData);
+        imageData = new ImageData();
         imageData.setImageId(R.drawable.sample_dubro);
         imageData.setImageName("두브로브니크");
         weekCommend.getImageDatas().add(imageData);
@@ -141,26 +145,22 @@ public class MainFragment extends Fragment {
         imageData.setImageId(R.drawable.sample_seoul);
         imageData.setImageName("서울");
         weekCommend.getImageDatas().add(imageData);
-        imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_paris);
-        imageData.setImageName("파리");
-        weekCommend.getImageDatas().add(imageData);
 
         mainData.setWeekCommend(weekCommend);
 
         AirBnBCommend airBnBCommend = new AirBnBCommend();
 
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_seoul);
-        imageData.setImageName("Shipping Containers");
+        imageData.setImageId(R.drawable.sample_airbnb);
+        imageData.setImageName("Geodesic Domes");
         airBnBCommend.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_paris);
-        imageData.setImageName("Horse Ranches");
+        imageData.setImageId(R.drawable.sample_airbnb2);
+        imageData.setImageName("Lighthouses");
         airBnBCommend.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_dubro);
-        imageData.setImageName("Milano Design");
+        imageData.setImageId(R.drawable.sample_airbnb3);
+        imageData.setImageName("Around the World");
         airBnBCommend.getImageDatas().add(imageData);
 
         mainData.setAirBnBCommend(airBnBCommend);
@@ -185,40 +185,33 @@ public class MainFragment extends Fragment {
         GuideData guideData = new GuideData();
 
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_seoul);
+        imageData.setImageId(R.drawable.sample_sanfran);
         imageData.setImageName("샌프란시스코");
         guideData.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_seoul);
-        imageData.setImageName("뉴욕");
-        guideData.getImageDatas().add(imageData);
-        imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_seoul);
+        imageData.setImageId(R.drawable.sample_london);
         imageData.setImageName("런던");
         guideData.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_dubro);
-        imageData.setImageName("파리");
+        imageData.setImageId(R.drawable.sample_london2);
+        imageData.setImageName("런던");
         guideData.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_seoul);
+        imageData.setImageId(R.drawable.sample_osaka);
+        imageData.setImageName("오사카");
+        guideData.getImageDatas().add(imageData);
+        imageData = new ImageData();
+        imageData.setImageId(R.drawable.sample_berlin);
         imageData.setImageName("베를린");
         guideData.getImageDatas().add(imageData);
         imageData = new ImageData();
-        imageData.setImageId(R.drawable.sample_seoul);
-        imageData.setImageName("로스엔젤레스");
-        guideData.getImageDatas().add(imageData);
 
         mainData.setGuideData(guideData);
 
         HostCommend hostCommend = new HostCommend();
-        hostCommend.setImage(ContextCompat.getDrawable(getContext(),R.drawable.sample_dubro));
-        hostCommend.setRecomendText("여유 공간을 임대하여 수입을 올리세요.");
-        mainData.setHostCommend2(hostCommend);
-
         hostCommend = new HostCommend();
-        hostCommend.setImage(ContextCompat.getDrawable(getContext(),R.drawable.sample_seoul));
-        hostCommend.setRecomendText("여행 크레딧을 받으세요!.");
+        hostCommend.setImage(ContextCompat.getDrawable(getContext(),R.drawable.sample_friends));
+        hostCommend.setRecomendText("여행 크레딧을 받으세요!");
         mainData.setHostCommend2(hostCommend);
 
         mAdapter.setmainData(mainData);
