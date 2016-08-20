@@ -1,28 +1,29 @@
 package example.tacademy.airbnb.data;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
 
 /**
- * Created by Tacademy on 2016-08-19.
+ * Created by Kwak on 2016-08-14.
  */
-public class ImageData {
-    private String Imageid;
+public class ImageData implements Serializable{
 
-    public String getImageid() {
-        return Imageid;
+    private int imageId;
+    private String imageName;
+
+
+    public int getImageId() {
+        return imageId;
     }
 
-    public void setImageid(String imageid) {
-        Imageid = imageid;
-    }
-    private List<ImageData> imageData = new ArrayList<>();
-
-    public List<ImageData> getImageData() {
-        return imageData;
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
     }
 
-    public void setImageData(List<ImageData> imageData) {
-        this.imageData = imageData;
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
     }
 }
