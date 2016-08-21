@@ -66,10 +66,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             }
             case R.id.menu_message: {
-
+                startActivity(new Intent(MainActivity.this, MessageActivity.class));
                 break;
             }
             case R.id.menu_travel: {
+                startActivity(new Intent(MainActivity.this, TravelActivity.class));
                 break;
             }
             case R.id.menu_wishlist: {

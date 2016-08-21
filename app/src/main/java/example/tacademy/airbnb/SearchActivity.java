@@ -74,7 +74,7 @@ public class SearchActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(SearchActivity.this, FindPasswordActivity.class);
+                Intent intent = new Intent(SearchActivity.this, CountryActivity.class);
                 startActivity(intent);
             }
         });

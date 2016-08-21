@@ -1,7 +1,7 @@
 package example.tacademy.airbnb;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 public class HelpActivity extends AppCompatActivity {
@@ -15,5 +15,6 @@ public class HelpActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.sample_back1);
         getSupportActionBar().setTitle("에어비앤비 도움말");
+
     }
 }

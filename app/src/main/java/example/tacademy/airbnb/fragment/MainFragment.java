@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import example.tacademy.airbnb.DetailLoginActivity;
+import example.tacademy.airbnb.CountryActivity;
 import example.tacademy.airbnb.R;
 import example.tacademy.airbnb.adapter.MainListAdapter;
 import example.tacademy.airbnb.data.AirBnBCommend;
@@ -36,7 +36,6 @@ public class MainFragment extends Fragment {
     private OnMainFragmentSelectListener mListener;
 
     public MainFragment() {
-        // Required empty public constructor
     }
 
     public static MainFragment newInstance() {
@@ -52,7 +51,6 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         listView = (RecyclerView) view.findViewById(R.id.rv_list);
         mAdapter = new MainListAdapter(getFragmentManager(),getContext());
@@ -63,7 +61,7 @@ public class MainFragment extends Fragment {
         mAdapter.setOnAdapterItemClickListener(new MainListAdapter.OnAdapterItemClickLIstener() {
             @Override
             public void onAdapterItemClick(View view, ImageData imageData) {
-                Intent intent = new Intent(getContext(), DetailLoginActivity.class);
+                Intent intent = new Intent(getContext(), CountryActivity.class);
                 startActivity(intent);
             }
         });
@@ -78,12 +76,7 @@ public class MainFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
+
     }
 
     @Override
@@ -93,7 +86,7 @@ public class MainFragment extends Fragment {
     }
     private void initData() {
         MainData mainData = new MainData();
-//        Drawable[] image = {ContextCompat.getDrawable(this,R.drawable.test), ContextCompat.getDrawable(this,R.drawable.test),ContextCompat.getDrawable(this,R.drawable.test)};
+
         mainData.setUserName("은지");
 
         SearchImage searchImage = new SearchImage();
